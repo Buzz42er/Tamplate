@@ -1,0 +1,20 @@
+$background: (
+    'first': hsl(225, 5%, 17%),
+    'second': hsl(225, 5%, 16%)
+);   
+
+$section-height: 100vh;
+
+@mixin sectionDarker {
+    min-height: 70vh;
+    margin: 0;
+    box-shadow: 0 0 5px gray;
+    background-color: map-get($map: $background, $key: 'first');
+    
+}
+
+@mixin sectionLighter {
+    min-height: 100vh;
+    margin: 0;
+    background-color: map-get($map: $background, $key: 'second');
+}
